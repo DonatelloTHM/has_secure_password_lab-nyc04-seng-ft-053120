@@ -1,0 +1,12 @@
+<h1>Log the heck in</h1>
+
+<% if flash[:notice] %>
+    <%= flash[:notice] %>
+<% end %>
+
+<%= form_tag login_path, method: :post do%>
+    <%= label_tag :name %><br>
+    <%= text_field_tag :name %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "Log in"%>
+<% end%>

@@ -1,0 +1,19 @@
+<h1>SiGn the Heck UP</h1>
+<% if @errors %>
+    <ul>
+        <% @errors.each do |error|%>
+            <li style="color:blue;"><%= error %></li>
+        <%end %>
+    </ul>
+<% end%>
+
+
+<%=form_for @user do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    <%= f.submit "Create User"%>
+<% end%>

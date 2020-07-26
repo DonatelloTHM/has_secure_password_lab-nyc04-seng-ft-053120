@@ -1,0 +1,7 @@
+<% if flash[:notice] %>
+    <%= flash[:notice] %>
+<% end %>
+<%= button_to "Logout", logout_path, method: :post%>
+
+
+<p>Hi, <%= @user.name %>.</p>
